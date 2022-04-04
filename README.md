@@ -3,11 +3,11 @@
 
 **BUILD AND RUN**                 
 
-1. Run tests
+1. Run tests<br>
 `test.bat`
-2. Run benchmarks
+2. Run benchmarks<br>
 `benchmark.bat`
-3. Build custom "driver" code
+3. Build custom "driver" code<br>
 `build.bat`
 
 *.bat files are portable to Linux!
