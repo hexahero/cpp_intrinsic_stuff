@@ -9,5 +9,3 @@
 `benchmark.bat`
 3. Build custom "driver" code<br>
 `build.bat`
-
-*.bat files are portable to Linux!
