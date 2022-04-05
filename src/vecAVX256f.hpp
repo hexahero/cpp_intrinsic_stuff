@@ -19,7 +19,8 @@ public:
     vecAVX256f operator * (const vecAVX256f& vecf);
     vecAVX256f operator / (const vecAVX256f& vecf);
     friend std::ostream& operator << (std::ostream& ostr, const vecAVX256f& vecf);
-
+	
+	std::string to_string();
     void print();
 
 private:
@@ -69,10 +70,22 @@ std::ostream& operator << (std::ostream& ostr, const vecAVX256f& vecf) {
 
     for (unsigned int i = 0; i != 8; ++i) {
             
-        std::cout << vecTemp[i] << '\n';
+        ostr << vecTemp[i] << '\n';
     }
 
     return ostr;
+}
+
+std::string vecAVX256f::to_string() {
+
+    std::stringstream ostr;
+
+    for (unsigned int i = 0; i != 8; ++i) {
+
+        ostr << vectorf[i] << ' ';
+    }
+    
+    return ostr.str();
 }
 
 void vecAVX256f::print() {

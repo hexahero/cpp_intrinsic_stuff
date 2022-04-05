@@ -81,11 +81,11 @@ vecAVX256f vec8(2.0);
 
     TEST_CASE("Test vecAVX256f add", "[op+]") {
 
-        vec256f addResult = vec1 + vec2;
+        vecAVX256f addResult = vec5 + vec6;
 
         REQUIRE(strcmp(addResult.to_string().c_str(), "11 22 33 44 55 66 77 88 ") == 0);
 
-        addResult = vec3 + vec4;
+        addResult = vec7 + vec8;
 
         REQUIRE(strcmp(addResult.to_string().c_str(), "4 4 4 4 4 4 4 4 ") == 0);
 
@@ -93,13 +93,13 @@ vecAVX256f vec8(2.0);
     
     TEST_CASE("Test vecAVX256f addeq", "[op+=]") {
 
-        vec256f addeqResult = vec1;
-        addeqResult += vec2;
+        vecAVX256f addeqResult = vec5;
+        addeqResult += vec6;
 
         REQUIRE(strcmp(addeqResult.to_string().c_str(), "11 22 33 44 55 66 77 88 ") == 0);
 
-        addeqResult = vec3;
-        addeqResult += vec4;
+        addeqResult = vec7;
+        addeqResult += vec8;
 
         REQUIRE(strcmp(addeqResult.to_string().c_str(), "4 4 4 4 4 4 4 4 ") == 0);
 
@@ -107,11 +107,11 @@ vecAVX256f vec8(2.0);
 
     TEST_CASE("Test vecAVX256f mul", "[op*]") {
 
-        vec256f mulResult = vec1 * vec2;
+        vecAVX256f mulResult = vec5 * vec6;
 
         REQUIRE(strcmp(mulResult.to_string().c_str(), "10 40 90 160 250 360 490 640 ") == 0);
 
-        mulResult = vec3 * vec4;
+        mulResult = vec7 * vec8;
 
         REQUIRE(strcmp(mulResult.to_string().c_str(), "4 4 4 4 4 4 4 4 ") == 0);
 
@@ -119,11 +119,11 @@ vecAVX256f vec8(2.0);
 
     TEST_CASE("Test vecAVX256f div", "[op/]") {
 
-        vec256f divResult = vec1 / vec2;
+        vecAVX256f divResult = vec5 / vec6;
 
         REQUIRE(strcmp(divResult.to_string().c_str(), "10 10 10 10 10 10 10 10 ") == 0);
 
-        divResult = vec3 / vec4;
+        divResult = vec7 / vec8;
 
         REQUIRE(strcmp(divResult.to_string().c_str(), "1 1 1 1 1 1 1 1 ") == 0);
 
@@ -245,8 +245,8 @@ vecAVX256f vec8(2.0);
 #ifdef BUILD
 
     int main() {
-
-        
+		
+		
 
         return 0;
     }
